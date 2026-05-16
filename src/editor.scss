@@ -1,0 +1,88 @@
+$primaryColor: #4527a4;
+
+.etfInspectorInfo {
+	padding: 6px;
+
+	a {
+		text-decoration: none;
+		font-weight: bold;
+	}
+
+
+}
+
+small {
+	font-size: 9px;
+}
+
+.wp-block-etf-twitter-feed {
+	.etfTwitterFeed {
+		.twitter_iframe {
+			position: relative !important;
+
+			&::after {
+				content: "" !important;
+				width: calc(100% - 17px) !important;
+				height: 100% !important;
+				position: absolute !important;
+				top: 0px !important;
+				left: 0px !important;
+				z-index: 9999;
+			}
+		}
+
+
+	}
+}
+
+.etfFrontShortcode {
+	position: relative;
+	display: inline-block;
+	margin: 0 auto;
+
+	input {
+		cursor: pointer;
+		text-align: center;
+		border: none;
+		outline: none;
+		background-color: $primaryColor;
+		color: #fff;
+		padding: 4px 10px;
+		border-radius: 3px;
+	}
+
+
+
+	.tooltip {
+		visibility: hidden;
+		width: 140px;
+		background-color: $primaryColor;
+		color: #fff;
+		text-align: center;
+		border-radius: 6px;
+		padding: 5px;
+		position: absolute;
+		z-index: 1;
+		bottom: 100%;
+		left: 50%;
+		margin-left: -75px;
+		opacity: 0;
+		transition: opacity 0.3s;
+
+		&::after {
+			content: "";
+			position: absolute;
+			top: 100%;
+			left: 50%;
+			margin-left: -5px;
+			border-width: 5px;
+			border-style: solid;
+			border-color: #555 transparent transparent transparent;
+		}
+	}
+
+	&:hover .tooltip {
+		visibility: visible;
+		opacity: 1;
+	}
+}

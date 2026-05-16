@@ -1,0 +1,31 @@
+$primaryColor: #4527a4;
+
+// Common CSS
+html {
+	scroll-behavior: smooth;
+}
+
+// Dashicon
+.dashicons {
+	font-family: dashicons !important;
+}
+
+// Block Name
+.wp-block-etf-twitter-feed {
+	* {
+		box-sizing: border-box;
+	}
+
+	.etfButton {
+		position: relative;
+		box-sizing: border-box;
+		display: inline-flex;
+		align-items: center;
+		gap: 5px;
+		cursor: pointer;
+
+		span {
+			font-size: inherit;
+		}
+	}
+}

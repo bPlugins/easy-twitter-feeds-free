@@ -1,0 +1,39 @@
+{
+  "name": "easy-twitter",
+  "version": "0.1.0",
+  "description": "Example block scaffolded with Create Block tool.",
+  "author": "The WordPress Contributors",
+  "license": "GPL-2.0-or-later",
+  "main": "build/index.js",
+  "scripts": {
+    "packages-update": "wp-scripts packages-update",
+    "lint": "eslint src",
+    "lint:css": "wp-scripts lint-style",
+    "lint:js": "wp-scripts lint-js",
+    "format": "wp-scripts format",
+    "start": "wp-scripts start --webpack-copy-php",
+    "build": "wp-scripts build --webpack-copy-php",
+    "i18n-pot": "wp i18n make-pot . languages/easy-twitter.pot --exclude=\"src\" && cp ./languages/easy-twitter.pot ./languages/easy-twitter-en_US.po",
+    "i18n-json": "wp i18n make-json languages/ --no-purge",
+    "i18n-mo": "wp i18n make-mo languages/",
+    "i18n": "npm run i18n-pot && npm run i18n-json && npm run i18n-mo",
+    "plugin-zip": "wp-scripts plugin-zip",
+    "find-ds": "find . -name '.DS_Store' -delete",
+    "bundle": "npm run lint && npm run build && npm run i18n && npm run find-ds && npm run plugin-zip"
+  },
+  "dependencies": {
+    "axios": "^1.6.2",
+    "immer": "^10.0.3",
+    "media-icons": "^0.10.0",
+    "plyr-react": "^5.3.0",
+    "react-icons": "^4.12.0",
+    "react-player": "^2.13.0",
+    "react-router-dom": "^7.9.5",
+    "swiper": "^11.0.3",
+    "vidstack": "^1.7.0"
+  },
+  "devDependencies": {
+    "@wordpress/scripts": "^27.9.0",
+    "eslint-webpack-plugin": "^4.2.0"
+  }
+}
