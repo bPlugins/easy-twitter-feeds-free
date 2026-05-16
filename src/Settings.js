@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 import { __ } from '@wordpress/i18n';
 import { InspectorControls, BlockControls, AlignmentToolbar } from '@wordpress/block-editor';
-import { PanelBody, TabPanel, TextControl, SelectControl, ToggleControl, __experimentalUnitControl as UnitControl, __experimentalBoxControl as BoxControl } from '@wordpress/components';
+import { PanelBody, TabPanel, TextControl, SelectControl, __experimentalUnitControl as UnitControl, __experimentalBoxControl as BoxControl } from '@wordpress/components';
 import { produce } from 'immer';
 
 // Settings Components
@@ -11,7 +11,7 @@ import { BorderControl } from '../../bpl-tools/Components/Deprecated';
 import { tabController } from '../../bpl-tools/utils/functions';
 import { emUnit, perUnit, pxUnit } from '../../bpl-tools/utils/options';
 
-import { generalStyleTabs, yesNoOptions, themes, types, twitterIcons } from './utils/options';
+import { generalStyleTabs, yesNoOptions, themes, types } from './utils/options';
 import { withSelect } from '@wordpress/data';
 
 const Settings = ({ attributes, setAttributes, updateObj, currentPostId, currentPostType }) => {
@@ -58,7 +58,7 @@ const Settings = ({ attributes, setAttributes, updateObj, currentPostId, current
 							options={types}
 						/>
 
-
+						<Notice status='premium' isIcon={true}>{__('Post, Video and HashTag types is available in the Premium version.', 'easy-twitter-feeds')}</Notice>
 					</PanelBody>
 
 					{['timeline'].includes(type) && <PanelBody className='bPlPanelBody' title={__('Config', 'easy-twitter-feeds')} initialOpen={false}>
@@ -68,9 +68,7 @@ const Settings = ({ attributes, setAttributes, updateObj, currentPostId, current
 
 						<SelectControl className='mt20' label={__('Theme', 'easy-twitter-feeds')} labelPosition='left' value={theme} onChange={val => updateObj('config', 'theme', val)} options={themes} />
 
-						<ToggleControl className='mt20' label={__('Show Header', 'easy-twitter-feeds')} checked={config.isHeader} onChange={val => updateObj('config', 'isHeader', val)} />
-						<ToggleControl className='mt20' label={__('Show Footer', 'easy-twitter-feeds')} checked={config.isFooter} onChange={val => updateObj('config', 'isFooter', val)} />
-						<TextControl className='mt20' label={__('Language', 'easy-twitter-feeds')} value={config.language} onChange={val => updateObj('config', 'language', val)} />
+						<Notice status='premium' isIcon={true}>{__('Show Header, Show Footer and Language settings are available in the Premium version.', 'easy-twitter-feeds')}</Notice>
 					</PanelBody>}
 
 					{['tweet'].includes(type) && <PanelBody className='bPlPanelBody addRemoveItems editItem' title={__('Tweet Button', 'easy-twitter-feeds')}>
@@ -102,7 +100,7 @@ const Settings = ({ attributes, setAttributes, updateObj, currentPostId, current
 
 						<BoxControl label={__('Padding:', 'easy-twitter-feeds')} value={padding} onChange={val => updateObj('button', 'padding', val)} resetValues={{ top: "6px", right: "10px", bottom: "6px", left: "10px" }} />
 
-						<SelectControl className='mt20' label={__('Icon Type:', 'easy-twitter-feeds')} labelPosition='left' value={button.iconsType} onChange={val => updateObj('button', 'iconsType', val)} options={twitterIcons} />
+						<Notice status='premium' isIcon={true}>{__('Icon(X Icon, Twitter Icon) settings are available in the Premium version.', 'easy-twitter-feeds')}</Notice>
 					</PanelBody>}
 				</>}
 			</>}</TabPanel>

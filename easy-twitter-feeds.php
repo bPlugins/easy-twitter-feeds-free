@@ -1,9 +1,9 @@
 <?php 
 /*
- * Plugin Name: Easy Twitter Feeds
+ * Plugin Name: Easy Twitter Feeds – Embed Social Media Posts with Live Updates
  * Plugin URI:  https://twitter-feed.bplugins.com/
  * Description: You can Embed your Twitter timeline feed, Follow widget anywhere in WordPress using Shortcode.  
- * Version: 1.2.12
+ * Version: 1.2.13
  * Author: bPlugins LLC
  * Author URI: https://bplugins.com/
  * Text Domain: easy-twitter-feeds
@@ -18,7 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
     if (defined('WP_DEBUG') && WP_DEBUG === true) {
         define('EASY_TF_VERSION', time());
     } else {
-        define('EASY_TF_VERSION', '1.2.12');
+        define('EASY_TF_VERSION', '1.2.13');
     }
     define( 'EASY_TF_DIR_URL', plugin_dir_url( __FILE__ ) );
     define( 'EASY_TF_DIR_PATH', plugin_dir_path( __FILE__ ) );
@@ -41,7 +41,6 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
                 'type'                => 'plugin',
                 'public_key'          => 'pk_ba9a28a91e7b8f97d024123dad59c',
                 'is_premium'          => false,
-                'is_org_compliant'    => true,
                 'menu'                =>  array(
                     'slug'        => 'edit.php?post_type=easy-twitter-feeds',
                     'first-path'  =>  'edit.php?post_type=easy-twitter-feeds&page=easy-twitter-feeds#/pricing',
@@ -60,8 +59,6 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
     
     require_once EASY_TF_DIR_PATH . 'inc/CustomPost.php';
     require_once EASY_TF_DIR_PATH . 'inc/ShortCode.php';
-
-     
     
     class EASY_TF_EASY_TWITTER_FEEDS
     {

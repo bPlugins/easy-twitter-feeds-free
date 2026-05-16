@@ -13,7 +13,8 @@ import FollowButton from './Components/Common/FollowButton';
 import TweetButton from './Components/Common/TweetButton';
 import { twitterIcon } from './utils/icons';
 import { types } from './utils/options';
-import { SelectControl } from '@wordpress/components';
+import { BtnGroup } from '../../bpl-tools/Components';
+
 
 const Edit = props => {
 	const { attributes, setAttributes, clientId, isSelected } = props;
@@ -53,7 +54,7 @@ const Edit = props => {
 					{type == "tweet" && <TweetButton attributes={attributes} />}
 				</> :
 					<Placeholder icon={twitterIcon('#03A9F4')} instructions={__("Choose a Feed type to get started.", "easy-twitter-feeds")} label={__("Choose a Feed Type", "easy-twitter-feeds")}>
-						<SelectControl value={type} onChange={val => setAttributes({ type: val })} options={types} />
+						<BtnGroup value={type} onChange={val => setAttributes({ type: val })} options={types} />
 					</Placeholder>}
 			</div>
 		</div>

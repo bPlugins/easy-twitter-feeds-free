@@ -1,5 +1,5 @@
 <?php
-if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) exit;
 class EASY_TF_CustomPost{
 	public $post_type = 'easy-twitter-feeds';
 
@@ -13,8 +13,6 @@ class EASY_TF_CustomPost{
 		add_action('post_row_actions', array($this, 'etf_add_duplicate_link'), 10, 2);
 		add_action('admin_action_duplicate_post', array($this, 'etf_duplicate_post'));
 	}
-
-	 
 
 	function onInit(){
 		$menuIcon = "<svg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' width='48' height='48' viewBox='0 0 48 48'>
@@ -58,7 +56,7 @@ class EASY_TF_CustomPost{
 		$blocks = parse_blocks( $post->post_content );
 
 		ob_start();
-		echo render_block($blocks[0]);
+		echo render_block($blocks[0]); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 
 		return ob_get_clean();
 	}
@@ -72,10 +70,15 @@ class EASY_TF_CustomPost{
 
 	function manageETFPostsCustomColumns( $column_name, $post_ID ) {
 		if ( $column_name == 'shortcode' ) {
-			echo "<div class='etfAdminShortcode' id='etfAdminShortcode-$post_ID'>
-				<input value='[etf id=$post_ID]' onclick='eftHandleShortcode($post_ID)'>
-				<span class='tooltip'>Copy To Clipboard</span>
-			</div>";
+			printf(
+				/* phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped */
+				'<div class="etfAdminShortcode" id="etfAdminShortcode-%1$s">
+					<input value="[etf id=%1$s]" onclick="eftHandleShortcode(%1$s)">
+					<span class="tooltip">%2$s</span>
+				</div>',
+				esc_attr( $post_ID ),
+				esc_html__( 'Copy To Clipboard', 'easy-twitter-feeds' )
+			);
 		}
 	}
 
@@ -89,20 +92,24 @@ class EASY_TF_CustomPost{
 	 function etf_add_duplicate_link($actions, $post)
 	{
 	   if ($post->post_type == 'easy-twitter-feeds') {
-		  $actions['duplicate'] = '<a href="' . admin_url("admin.php?action=duplicate_post&post={$post->ID}") . '">Duplicate</a>';
-		  
+		  $url = admin_url("admin.php?action=duplicate_post&post={$post->ID}");
+		  $nonce_url = wp_nonce_url($url, 'etf_duplicate_post_' . $post->ID);
+		  $actions['duplicate'] = '<a href="' . esc_url($nonce_url) . '">Duplicate</a>';
 	   }
 	   return $actions;
 	}
 
 	public function etf_duplicate_post()
     {
-        if (!isset($_GET['post']) || !current_user_can('edit_posts')) {
-            wp_die('Permission denied');
+        if ( ! isset( $_GET['post'] ) || ! isset( $_GET['_wpnonce'] ) || ! current_user_can( 'edit_posts' ) ) {
+            wp_die( 'Permission denied' );
         }
 
-        $post_id = $_GET['post'];
-        $post = get_post($post_id);
+        // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+        $post_id = absint( wp_unslash( $_GET['post'] ) );
+        check_admin_referer( 'etf_duplicate_post_' . $post_id );
+
+        $post = get_post( $post_id );
 
         if (!$post) {
             wp_die('Invalid post ID');
@@ -116,7 +123,7 @@ class EASY_TF_CustomPost{
         );
 
         $new_post_id = wp_insert_post($new_post);
-        wp_redirect(admin_url("post.php?action=edit&post={$new_post_id}"));
+        wp_safe_redirect(admin_url("post.php?action=edit&post={$new_post_id}"));
         exit;
     }
 }
