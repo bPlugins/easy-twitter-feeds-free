@@ -1,5 +1,5 @@
 <?php
-if (!defined('ABSPATH')) {exit;}
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 if(!class_exists('EASY_TF_AdminMenu')) {
 
     class EASY_TF_AdminMenu

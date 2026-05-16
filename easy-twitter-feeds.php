@@ -12,7 +12,7 @@
  */
 
 // ABS PATH
-if ( !defined( 'ABSPATH' ) ) { exit; }
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
     // Constants
     define( 'EASY_TF_ASSETS_DIR', plugin_dir_url(__FILE__) . 'assets/');
     if (defined('WP_DEBUG') && WP_DEBUG === true) {
@@ -41,6 +41,7 @@ if ( !defined( 'ABSPATH' ) ) { exit; }
                 'type'                => 'plugin',
                 'public_key'          => 'pk_ba9a28a91e7b8f97d024123dad59c',
                 'is_premium'          => false,
+                'is_org_compliant'    => true,
                 'menu'                =>  array(
                     'slug'        => 'edit.php?post_type=easy-twitter-feeds',
                     'first-path'  =>  'edit.php?post_type=easy-twitter-feeds&page=easy-twitter-feeds#/pricing',

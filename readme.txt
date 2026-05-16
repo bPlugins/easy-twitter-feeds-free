@@ -1,8 +1,8 @@
 === Feeds for Twitter – Embed Social Media Posts with Live Updates ===
 Contributors: bplugins, abuhayat, charlescormier, shehabulislam, btechnologies, freemius
 Tags: Twitter Feed, Embed Twitter , X Post, follow button, X
-Requires at least: 6.5+
-Tested up to: 6.8.3
+Requires at least: 6.5
+Tested up to: 6.8
 Stable tag: 1.2.12
 Requires PHP: 7.1
 Donate link: https://www.buymeacoffee.com/abuhayat
@@ -155,6 +155,20 @@ You can customize the Follow button according to the ShortCode below…
 
 🔥 **[Button Block](https://wordpress.org/plugins/button-block/)** – Get fully customizable & multi-functional buttons.
 
+
+== External services ==
+
+This plugin uses Freemius and the bPlugins API middleware to offer opt-in usage tracking, premium features, and diagnostics.
+* **Service:** Freemius and bPlugins API (api.bplugins.com)
+* **Purpose:** Usage tracking, diagnostics, and offering premium features.
+* **Data sent:** Plugin version, WordPress version, site URL, and admin email (only if the user explicitly opts in).
+* **Terms of Service:** https://freemius.com/terms/
+* **Privacy Policy:** https://freemius.com/privacy/
+
+== Source Code ==
+
+The human-readable source code for generated and compressed files (like build files and widget scripts) in this plugin can be found in our public repository:
+https://github.com/bPlugins/easy-twitter-feeds-free
 
 == Installation ==
 

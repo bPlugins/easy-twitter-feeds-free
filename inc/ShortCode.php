@@ -1,5 +1,5 @@
 <?php
-if (!defined('ABSPATH')) {exit;}
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 class EASY_TF_ShortCode{
 	public function __construct(){
 		add_action( 'admin_enqueue_scripts', [$this, 'enqueueScripts'] );

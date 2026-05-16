@@ -1,8 +1,8 @@
-<li>&emsp;<strong>{__('Tweet Button: ', 'easy-twitter')}</strong>{__('Quick tweet with the text', 'easy-twitter')}</li>
-<li>&emsp;<strong>{__('Hastag Button: ', 'easy-twitter')}</strong>{__('Quick tag with the text', 'easy-twitter')}</li>
-<li>&emsp;<strong>{__('Header: ', 'easy-twitter')}</strong>{__('Hide the timeline header', 'easy-twitter')}</li>
-<li>&emsp;<strong>{__('Footer: ', 'easy-twitter')}</strong>{__('Hide the timeline footer', 'easy-twitter')}</li>
-<li>&emsp;<strong>{__('Language: ', 'easy-twitter')}</strong>{__('Select language for the timeline', 'easy-twitter')}</li>
-<li>&emsp;<strong>{__('Video: ', 'easy-twitter')}</strong>{__('Video from any twitter post', 'easy-twitter')}</li>
-<li>&emsp;<strong>{__('Post: ', 'easy-twitter')}</strong>{__('Show Twitter Spacific Post', 'easy-twitter')}</li>
-<li>&emsp;<strong>{__('Button Icon: ', 'easy-twitter')}</strong>{__('You Can change the Button Icon', 'easy-twitter')}</li>
+<li>&emsp;<strong>{__('Tweet Button: ', 'easy-twitter-feeds')}</strong>{__('Quick tweet with the text', 'easy-twitter-feeds')}</li>
+<li>&emsp;<strong>{__('Hastag Button: ', 'easy-twitter-feeds')}</strong>{__('Quick tag with the text', 'easy-twitter-feeds')}</li>
+<li>&emsp;<strong>{__('Header: ', 'easy-twitter-feeds')}</strong>{__('Hide the timeline header', 'easy-twitter-feeds')}</li>
+<li>&emsp;<strong>{__('Footer: ', 'easy-twitter-feeds')}</strong>{__('Hide the timeline footer', 'easy-twitter-feeds')}</li>
+<li>&emsp;<strong>{__('Language: ', 'easy-twitter-feeds')}</strong>{__('Select language for the timeline', 'easy-twitter-feeds')}</li>
+<li>&emsp;<strong>{__('Video: ', 'easy-twitter-feeds')}</strong>{__('Video from any twitter post', 'easy-twitter-feeds')}</li>
+<li>&emsp;<strong>{__('Post: ', 'easy-twitter-feeds')}</strong>{__('Show Twitter Spacific Post', 'easy-twitter-feeds')}</li>
+<li>&emsp;<strong>{__('Button Icon: ', 'easy-twitter-feeds')}</strong>{__('You Can change the Button Icon', 'easy-twitter-feeds')}</li>
