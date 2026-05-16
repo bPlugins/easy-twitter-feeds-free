@@ -13,7 +13,7 @@ class EASY_TF_ShortCode{
     }
 
     function timelineShortCode( $atts ){
-        extract( shortcode_atts( array(
+        $a = shortcode_atts( array(
             'username' => null,
             'width' => null,
             'height' => null,				
@@ -21,7 +21,14 @@ class EASY_TF_ShortCode{
             'title' => null,
             'lang' => null,		
             'chrome' => null,
-        ), $atts ) );
+        ), $atts );
+        $username = $a['username'];
+        $width = $a['width'];
+        $height = $a['height'];
+        $theme = $a['theme'];
+        $title = $a['title'];
+        $lang = $a['lang'];
+        $chrome = $a['chrome'];
         
         ob_start();
         if (!empty($username)){  ?>
@@ -39,11 +46,14 @@ class EASY_TF_ShortCode{
     }
 
     function followButtonShortCode( $atts ){
-        extract( shortcode_atts( array(
+        $a = shortcode_atts( array(
             'username' => null,
             'size' => null,
             'count' => null,
-        ), $atts ) );
+        ), $atts );
+        $username = $a['username'];
+        $size = $a['size'];
+        $count = $a['count'];
     
         ob_start();
         if (!empty($username)){ ?>
@@ -55,7 +65,7 @@ class EASY_TF_ShortCode{
             <?php }else{ echo '<h2>You must enter your Twitter handle in the username attribute of the shortcode.  </h2>';}
         ?>
         </div>
-        <?php return ob_get_contents();
+        <?php return ob_get_clean();
     }
 }
 new EASY_TF_ShortCode;

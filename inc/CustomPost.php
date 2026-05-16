@@ -50,7 +50,10 @@ class EASY_TF_CustomPost{
 	}
 
 	function onAddShortcode( $atts ) {
-		$post_id = $atts['id'];
+		if ( empty( $atts['id'] ) ) {
+			return '';
+		}
+		$post_id = (int) $atts['id'];
 
 		$post = get_post( $post_id );
 		$blocks = parse_blocks( $post->post_content );
