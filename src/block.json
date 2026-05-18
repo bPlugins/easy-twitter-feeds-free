@@ -6,9 +6,11 @@
 	"description": "A Easy twitter Feeds plugin",
 	"category": "widgets",
 	"keywords": [
-		"key1",
-		"key2",
-		"key3"
+		"twitter",
+		"X",
+		"social media",
+		"feed",
+		"embed"
 	],
 	"textdomain": "easy-twitter-feeds",
 	"attributes": {
@@ -84,7 +86,7 @@
 			}
 		},
 		"shadow": {
-			"type": "array",
+			"type": "object",
 			"default": {}
 		}
 	},

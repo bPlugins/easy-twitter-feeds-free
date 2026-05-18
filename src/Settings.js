@@ -22,16 +22,19 @@ const Settings = ({ attributes, setAttributes, updateObj, currentPostId, current
 	const clickToCopyToolTipRef = useRef(null);
 	const clickToCopyRef = useRef(null);
 
-	const clickToCopy = () => {
-		if (clickToCopyRef.current) {
-			clickToCopyRef.current.select();
-
-			document.execCommand('copy');
-			clickToCopyToolTipRef.current.innerHTML = __('Copied Successfully!', 'easy-twitter-feeds');
-			setTimeout(() => {
-				clickToCopyToolTipRef.current.innerHTML = __('Copy To Clipboard', 'easy-twitter-feeds');
-			}, 1500);
+	const clickToCopy = async () => {
+		if (!clickToCopyRef.current) { return; }
+		const val = `[etf id=${currentPostId}]`;
+		try {
+			await navigator.clipboard.writeText(val);
+		} catch (e) {
+			clickToCopyRef.current.select?.();
+			document.execCommand('copy'); // eslint-disable-line -- intentional fallback for non-secure (HTTP) contexts
 		}
+		clickToCopyToolTipRef.current.innerHTML = __('Copied Successfully!', 'easy-twitter-feeds');
+		setTimeout(() => {
+			clickToCopyToolTipRef.current.innerHTML = __('Copy To Clipboard', 'easy-twitter-feeds');
+		}, 1500);
 	}
 
 	return <>

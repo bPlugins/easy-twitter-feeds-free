@@ -72,7 +72,7 @@ export const dashboardInfo = (info) => {
             'Follow Button Style - Add Button style color, Background, Font Size, and Padding.',
             'Timeline - Hide the timeline header and footer.',
             'Timeline Language: Translate the timeline to any language.',
-            'Button Icon - Add Twitter’s latest icon.',
+            'Button Icon - Add Twitter\'s latest icon.',
             'Tweet Button - Add Tweet Button with tweet text.',
             'Hashtag - Add a Hashtag with tweet text.',
             'Video - Add a video from any specific Twitter post.',

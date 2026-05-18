@@ -4,12 +4,9 @@ const TweetButton = ({ attributes }) => {
     const { userName, button } = attributes
     const { iconsType } = button
 
-    const handleTwitterTweet = () => {
-        const twitterUrl = `https://twitter.com/intent/tweet?screen_name=${userName}&text=${button.tweetText}`;
-        window.open(twitterUrl, '_blank');
-    };
+    const twitterUrl = `https://twitter.com/intent/tweet?screen_name=${encodeURIComponent(userName)}&text=${encodeURIComponent(button.tweetText)}`;
 
-    return <a onClick={handleTwitterTweet} className="etfButton">
+    return <a href={twitterUrl} target="_blank" rel="noopener noreferrer" className="etfButton">
         {iconsType == "tIcon" ? twitterIcon() : XIcon()}
         <span>Tweet to @{userName}</span>
     </a>

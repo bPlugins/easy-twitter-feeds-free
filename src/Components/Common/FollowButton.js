@@ -4,12 +4,9 @@ const FollowButton = ({ attributes }) => {
     const { userName, button } = attributes;
     const { iconsType } = button
 
-    const handleTwitterFollow = () => {
-        const twitterUrl = `https://twitter.com/intent/follow?region=follow_link&screen_name=${userName}`;
-        window.open(twitterUrl, '_blank');
-    };
+    const twitterUrl = `https://twitter.com/intent/follow?region=follow_link&screen_name=${encodeURIComponent(userName)}`;
 
-    return <a onClick={handleTwitterFollow} rel='noreferrer' className="etfButton">
+    return <a href={twitterUrl} target="_blank" rel="noopener noreferrer" className="etfButton">
         {iconsType == "tIcon" ? twitterIcon() : XIcon()}
         <span> Follow @{userName}</span>
     </a>

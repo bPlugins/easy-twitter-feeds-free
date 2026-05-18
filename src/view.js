@@ -1,4 +1,4 @@
-import { render } from 'react-dom';
+import { createRoot } from 'react-dom/client';
 
 import './style.scss';
 import Style from './Style';
@@ -10,13 +10,19 @@ import TweetButton from './Components/Common/TweetButton';
 document.addEventListener('DOMContentLoaded', () => {
 	const blockEls = document.querySelectorAll('.wp-block-etf-twitter-feed');
 	blockEls.forEach(blockEl => {
-		const attributes = JSON.parse(blockEl.dataset.attributes);
+		let attributes;
+		try {
+			attributes = JSON.parse(blockEl.dataset.attributes);
+		} catch (e) {
+			console.error('Easy Twitter Feeds: Failed to parse block attributes', e);
+			return;
+		}
 
-		render(<>
-			<Style attributes={attributes} id={blockEl?.id} />
+		createRoot(blockEl).render(<>
+				<Style attributes={attributes} id={blockEl?.id} />
 
-			<TwitterFeed attributes={attributes} />
-		</>, blockEl);
+				<TwitterFeed attributes={attributes} />
+			</>);
 
 		blockEl?.removeAttribute('data-attributes');
 	});
