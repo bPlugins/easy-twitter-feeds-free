@@ -34,7 +34,8 @@ if(!class_exists('EASY_TF_AdminMenu')) {
         {?>
             <div id='etfDashboard'
             data-info='<?php echo esc_attr( wp_json_encode( [
-                    'version' => EASY_TF_VERSION
+                    'version' => EASY_TF_VERSION,
+                    'adminUrl' => admin_url(),
                 ] ) ); ?>'
             ></div>
         <?php }

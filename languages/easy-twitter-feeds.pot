@@ -2,14 +2,14 @@
 # This file is distributed under the GPLv2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Easy Twitter Feeds – Embed Social Media Posts with Live Updates 1.2.13\n"
+"Project-Id-Version: Easy Twitter Feeds – Embed Social Media Posts with Live Updates 1.2.14\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/easy-twitter-feeds\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-05-18T06:20:19+00:00\n"
+"POT-Creation-Date: 2026-06-24T12:36:54+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: easy-twitter-feeds\n"
@@ -39,93 +39,117 @@ msgstr ""
 msgid "https://bplugins.com/"
 msgstr ""
 
+#: easy-twitter-feeds/inc/admin-menu.php:25
+#: easy-twitter-feeds/inc/admin-menu.php:26
 #: inc/admin-menu.php:25
 #: inc/admin-menu.php:26
 msgid "Demo and Help"
 msgstr ""
 
+#: easy-twitter-feeds/inc/CustomPost.php:23
+#: easy-twitter-feeds/inc/CustomPost.php:24
+#: easy-twitter-feeds/inc/CustomPost.php:25
 #: inc/CustomPost.php:23
 #: inc/CustomPost.php:24
 #: inc/CustomPost.php:25
 msgid "Easy Twitter"
 msgstr ""
 
+#: easy-twitter-feeds/inc/CustomPost.php:26
 #: inc/CustomPost.php:26
 msgid "All Easy Twitter"
 msgstr ""
 
+#: easy-twitter-feeds/inc/CustomPost.php:27
 #: inc/CustomPost.php:27
 msgid "Add New"
 msgstr ""
 
+#: easy-twitter-feeds/inc/CustomPost.php:28
 #: inc/CustomPost.php:28
 msgid "&#8627; Add New"
 msgstr ""
 
+#: easy-twitter-feeds/inc/CustomPost.php:29
 #: inc/CustomPost.php:29
 msgid "Edit"
 msgstr ""
 
+#: easy-twitter-feeds/inc/CustomPost.php:30
 #: inc/CustomPost.php:30
 msgid "New"
 msgstr ""
 
+#: easy-twitter-feeds/inc/CustomPost.php:31
 #: inc/CustomPost.php:31
 msgid "View"
 msgstr ""
 
+#: easy-twitter-feeds/inc/CustomPost.php:32
 #: inc/CustomPost.php:32
 msgid "Search"
 msgstr ""
 
+#: easy-twitter-feeds/inc/CustomPost.php:33
 #: inc/CustomPost.php:33
 msgid "Sorry, we couldn't find the post that you are looking for."
 msgstr ""
 
+#: easy-twitter-feeds/inc/CustomPost.php:86
 #: inc/CustomPost.php:86
 #: assets/js/admin.js:14
+#: easy-twitter-feeds/assets/js/admin.js:14
 msgid "Copy To Clipboard"
 msgstr ""
 
+#: easy-twitter-feeds/inc/CustomPost.php:106
 #: inc/CustomPost.php:106
 msgid "Duplicate"
 msgstr ""
 
 #: assets/js/admin.js:12
+#: easy-twitter-feeds/assets/js/admin.js:12
 msgid "Copied Successfully!"
 msgstr ""
 
 #: build/block.json
+#: easy-twitter-feeds/build/block.json
 msgctxt "block title"
 msgid "Twitter Feed"
 msgstr ""
 
 #: build/block.json
+#: easy-twitter-feeds/build/block.json
 msgctxt "block description"
 msgid "A Easy twitter Feeds plugin"
 msgstr ""
 
 #: build/block.json
+#: easy-twitter-feeds/build/block.json
 msgctxt "block keyword"
 msgid "twitter"
 msgstr ""
 
 #: build/block.json
+#: easy-twitter-feeds/build/block.json
 msgctxt "block keyword"
 msgid "X"
 msgstr ""
 
 #: build/block.json
+#: easy-twitter-feeds/build/block.json
 msgctxt "block keyword"
 msgid "social media"
 msgstr ""
 
 #: build/block.json
+#: easy-twitter-feeds/build/block.json
 msgctxt "block keyword"
 msgid "feed"
 msgstr ""
 
 #: build/block.json
+#: easy-twitter-feeds/build/block.json
 msgctxt "block keyword"
 msgid "embed"
 msgstr ""

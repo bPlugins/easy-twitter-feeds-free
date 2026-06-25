@@ -1,1 +1,27 @@
-html{scroll-behavior:smooth}.dashicons{font-family:dashicons!important}.wp-block-etf-twitter-feed *{box-sizing:border-box}.wp-block-etf-twitter-feed .etfButton{align-items:center;box-sizing:border-box;cursor:pointer;display:inline-flex;gap:5px;position:relative}.wp-block-etf-twitter-feed .etfButton span{font-size:inherit}
+/*!***********************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/@wordpress/scripts/node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/style.scss ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************/
+html {
+  scroll-behavior: smooth;
+}
+
+.dashicons {
+  font-family: dashicons !important;
+}
+
+.wp-block-etf-twitter-feed * {
+  box-sizing: border-box;
+}
+
+.wp-block-etf-twitter-feed .etfButton {
+  position: relative;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.wp-block-etf-twitter-feed .etfButton span {
+  font-size: inherit;
+}

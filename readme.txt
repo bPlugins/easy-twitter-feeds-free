@@ -2,8 +2,8 @@
 Contributors: bplugins, abuhayat, charlescormier, shehabulislam, btechnologies, freemius
 Tags: Twitter Feed, Embed Twitter , X Post, follow button, X
 Requires at least: 6.5
-Tested up to: 6.9
-Stable tag: 1.2.13
+Tested up to: 7.0
+Stable tag: 1.2.14
 Requires PHP: 7.4
 Donate link: https://www.buymeacoffee.com/abuhayat
 License: GPLv2 or later
@@ -170,6 +170,9 @@ No, you don't need to set anything before using the ShortCode.
 
 == Upgrade Notice ==
 
+= 1.2.14 - 24 June, 26 =
+* Update: Added new modern dashboard;
+
 = 1.2.12 - 13 April, 26 =
 * Added modern dashboard;
 
@@ -215,6 +218,9 @@ No, you don't need to set anything before using the ShortCode.
 * Initial Release
 
 == Changelog ==
+
+= 1.2.14 - 24 June, 26 =
+* Update: Added new modern dashboard;
 
 = 1.2.13 - 18 May, 26 =
 * Update: Removed restricted "Locked Fields" to improve user flexibility

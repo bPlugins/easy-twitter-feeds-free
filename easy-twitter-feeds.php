@@ -3,7 +3,7 @@
  * Plugin Name: Easy Twitter Feeds – Embed Social Media Posts with Live Updates
  * Plugin URI:  https://twitter-feed.bplugins.com/
  * Description: You can Embed your Twitter timeline feed, Follow widget anywhere in WordPress using Shortcode.  
- * Version: 1.2.13
+ * Version: 1.2.14
  * Author: bPlugins LLC
  * Author URI: https://bplugins.com/
  * Text Domain: easy-twitter-feeds
@@ -18,7 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
     if (defined('WP_DEBUG') && WP_DEBUG === true) {
         define('EASY_TF_VERSION', time());
     } else {
-        define('EASY_TF_VERSION', '1.2.13');
+        define('EASY_TF_VERSION', '1.2.14');
     }
     define( 'EASY_TF_DIR_URL', plugin_dir_url( __FILE__ ) );
     define( 'EASY_TF_DIR_PATH', plugin_dir_path( __FILE__ ) );
